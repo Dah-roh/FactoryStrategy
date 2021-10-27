@@ -37,11 +37,12 @@ public class Main {
         "                    \"    }\\n\" +\n" +
         "                    \"}\";";
 
-      Files.write(newPath, json.getBytes());
-      Path newPath1 = Paths.get("src/main/resources/File.txt");
-      List<String> line = Files.readAllLines(newPath);
-      String json1 = Arrays.toString(line.toArray());
-      Files.write(newPath1, json1.getBytes());
+      Files.write(newPath, json.getBytes());//write to json file
+      Path newPath1 = Paths.get("src/main/resources/File.txt");//create a path to text file
+      List<String> line = Files.readAllLines(newPath);//read from json file into array
+      String json1 = Arrays.toString(line.toArray());//convert array to string
+      Files.write(newPath1, json1.getBytes());//write string to text file
+      //Eureka!!
 
     }
     catch (IOException ex){
